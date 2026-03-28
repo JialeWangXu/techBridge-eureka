@@ -4,12 +4,12 @@ on:
     branches: [main]
 
 env:
-  REPOSITORY: ${{ github.repository }} # <user>/<repo>
+  REPOSITORY: jialewangxu/techbridge-eureka # <user>/<repo>
   GHCR_URL: ghcr.io # GitHub Container Registry
 
 jobs:
   cd:
-    name: Build & Push GitHub Package & Deploy on Render Docker Image
+    name: Build & Push GitHub Package
     runs-on: ubuntu-22.04
     steps:
       - name: Clone repository
