@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>es.techbridge</groupId>
-    <artifactId>techbridge-eureka</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>techBridge-eureka</artifactId>
+    <version>1.0.0-Release</version>
     <name>techBridge-eureka</name>
-    <description>techbridge-eureka</description>
+    <description>techBridge-eureka</description>
     <url/>
     <licenses>
         <license/>
