@@ -1,0 +1,19 @@
+services:
+  techBridge-eureka:
+    container_name: techbridge-eureka
+    build: .
+    image: techbridge-eureka:latest
+    restart: always
+    ports:
+      - "8761:8761"
+    networks:
+      - techBridge
+
+networks:
+  techBridge:
+    driver: bridge
+
+#> docker network create techBridge
+#> docker compose up --build -d
+# Para ver los logs de arranque
+#> docker logs -f techbridge-eureka

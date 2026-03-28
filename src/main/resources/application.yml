@@ -1,0 +1,54 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: techBridge-eureka
+  profiles:
+    # Activa el perfil de desarrollo por defecto
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  output:
+    # Para que los logs siempre se ve con colores
+    ansi:
+      enabled: always
+  security:
+    user:
+      # Si no existen, por defecto usa 'admin' y 'admin123'
+      name: ${EUREKA_USER:admin}
+      password: ${EUREKA_PASSWORD:admin123}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # para solo exponer el estado de salud del servidor
+        include: health
+  endpoint:
+    health:
+      # pero sin dar detalle del estado
+      show-details: never
+
+logging:
+  level:
+    # solo quiero los logs de springBoot del nivel WARN
+    root: WARN
+    # Para recibir los logs de mi paquete de proyecto
+    es.techbridge: DEBUG
+
+eureka:
+  instance:
+    # para registrar los servicios con ip en vez de hostname
+    prefer-ip-address: true
+  client:
+    # switch off client-side behavior, usamos standalone mode
+    # Como es el servidor, no se registra a si mismo
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    # si de repente falla muchos microservicios a la vez, Eureka deja de borrarlos de la lista
+    # asume que es el problema de la red
+    enable-self-preservation: true
+    # cada 30 segundos, eureka manda health check para quitar los servicios muertos de la lista
+    eviction-interval-timer-in-ms: 30000
+    # espera 30 segundos para que los servicios responda la peticion de health check
+    expected-client-renewal-interval-seconds: 30
