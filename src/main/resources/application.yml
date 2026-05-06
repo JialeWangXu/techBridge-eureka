@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: techBridge-eureka
+    name: techbridge-eureka
   profiles:
     # Activa el perfil de desarrollo por defecto
     active: ${SPRING_PROFILES_ACTIVE:dev}

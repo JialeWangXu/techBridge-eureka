@@ -10,9 +10,9 @@
     </parent>
     <groupId>es.techbridge</groupId>
     <artifactId>techBridge-eureka</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
-    <name>techBridge-eureka</name>
-    <description>techBridge-eureka</description>
+    <version>1.2.0-SNAPSHOT</version>
+    <name>techbridge-eureka</name>
+    <description>techbridge-eureka</description>
     <url/>
     <licenses>
         <license/>
