@@ -10,7 +10,7 @@
     </parent>
     <groupId>es.techbridge</groupId>
     <artifactId>techBridge-eureka</artifactId>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>1.2.0-release</version>
     <name>techbridge-eureka</name>
     <description>techbridge-eureka</description>
     <url/>
